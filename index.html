@@ -75,19 +75,70 @@
     </tr>
     
   </table>
+  <p id="Message"></p>
+  <p id="Ap"></p>
+  
+  <Button onclick="Move_Up()">Up</Button>
+  
 <script>
 
-  var playerSpace
-  var orkSpace
-  var playerHp
-  var orkHp
-  var orkmaxHp
-  var playerAtk
-  var orkAtk
+  var playerSpace;
+  var orkSpace;
+  var playerHp;
+  var orkHp;
+  var orkmaxHp;
+  var playerAtk;
+  var orkAtk;
+  var playerAp;
+  var orkAp;
+  var grass_space
   
  function gamestart() {
-   
+   playerHp = 50;
+   orkHp = 5
+   orkmaxHp = 5
+   playerSpace = 33;
+   playerAp = 3
+   document.getElementById("Ap").innerHTML=playerAP + " Actions remaining";
+   document.getElementById("space33").src=" 	DND_Test_player.png";
+   switch(Math.floor(Math.random * 4) + 1) {
+     case 1:
+       getElementById("space11").scr="DND_Test_ork.png";
+       orkSpace = 11;
+       break;
+     case 2:
+       getElementById("space15").scr="DND_Test_ork.png";
+       orkSpace = 15;
+       break;
+     case 3:
+       getElementById("space55").scr="DND_Test_ork.png";
+       orkSpace = 55;
+       break;
+     case 4:
+       getElementById("space51").scr="DND_Test_ork.png";
+       orkSpace = 51;
+       break;
+   }
  }
+  function Move_Up() {
+    switch(playerSpace - 1) {
+      case orkSpace:
+        document.getElementById("Message").innerHTML="You can`t move on an enemies Space!";
+        break;
+      case 44:
+        document.getElementById("Message").innerHTML="You can`t move there!";
+        break;
+      case 23:
+        document.getElementById("Message").innerHTML="You can`t move there!";
+        break;
+      case 24:
+        document.getElementById("Message").innerHTML="You can`t move there!";
+        break;
+      default:
+        grass_space = "space" + playerSpace;
+        
+  }
+  }
 </script>
 </body>
 </html>
