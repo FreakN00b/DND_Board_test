@@ -75,6 +75,7 @@
     </tr>
     
   </table>
+  <p id="Hp"></p>
   <p id="Message"></p>
   <p id="Ap"></p>
   
@@ -94,6 +95,7 @@
   var orkAtk;
   var playerAp;
   var orkAp;
+  var orksKilled;
   
  function gamestart() {
    playerHp = 50;
@@ -673,6 +675,512 @@
       default:
        document.getElementById("Message").innerHTML="You can`t move there!";     
   }
+  }
+  function shortsword() {
+    switch (playerSpace) {
+      case orkSpace + 1:
+    var PATK = Math.floor((Math.random() * 5) + 1);
+    var EATK = Math.floor((Math.random() * 3) + 1);
+    orkHP = orkHP - PATK;
+      
+    if (EnemyHP < 1) {
+    	orksKilled = orksKilled + 1;
+        orkmaxHp = orkmaxHp + 5;
+    	orkHP = orkmaxHp;
+        Hp = Hp + Math.floor((Math.random() * 10) + 1);
+        document.getElementById("HP").innerHTML='HP ' + playerHp;
+        switch(orkSpace) {
+          case 11:
+            getElementById("space11").scr="DND_Test_Grass.png";
+            break;
+            case 12:
+            getElementById("space12").scr="DND_Test_Grass.png";
+            break;
+            case 13:
+            getElementById("space13").scr="DND_Test_Grass.png";
+            break;
+            case 14:
+            getElementById("space14").scr="DND_Test_Grass.png";
+            break;
+            case 15:
+            getElementById("space15").scr="DND_Test_Grass.png";
+            break;
+            case 21:
+            getElementById("space21").scr="DND_Test_Grass.png";
+            break;
+            case 22:
+            getElementById("space22").scr="DND_Test_Grass.png";
+            break;
+            case 23:
+            getElementById("space23").scr="DND_Test_Grass.png";
+            break;
+            case 24:
+            getElementById("space24").scr="DND_Test_Grass.png";
+            break;
+            case 25:
+            getElementById("space25").scr="DND_Test_Grass.png";
+            break;
+            case 31:
+            getElementById("space31").scr="DND_Test_Grass.png";
+            break;
+            case 32:
+            getElementById("space32").scr="DND_Test_Grass.png";
+            break;
+            case 33:
+            getElementById("space33").scr="DND_Test_Grass.png";
+            break;
+            case 34:
+            getElementById("space34").scr="DND_Test_Grass.png";
+            break;
+            case 35:
+            getElementById("space35").scr="DND_Test_Grass.png";
+            break;
+            case 41:
+            getElementById("space41").scr="DND_Test_Grass.png";
+            break;
+            case 42:
+            getElementById("space42").scr="DND_Test_Grass.png";
+            break;
+            case 43:
+            getElementById("space43").scr="DND_Test_Grass.png";
+            break;
+            case 44:
+            getElementById("space44").scr="DND_Test_Grass.png";
+            break;
+            case 45:
+            getElementById("space45").scr="DND_Test_Grass.png";
+            break;
+            case 51:
+            getElementById("space51").scr="DND_Test_Grass.png";
+            break;
+            case 52:
+            getElementById("space52").scr="DND_Test_Grass.png";
+            break;
+            case 53:
+            getElementById("space53").scr="DND_Test_Grass.png";
+            break;
+            case 54:
+            getElementById("space54").scr="DND_Test_Grass.png";
+            break;
+            case 55:
+            getElementById("space55").scr="DND_Test_Grass.png";
+            break;
+        }
+        switch(Math.floor(Math.random * 4) + 1) {
+     case 1:
+       getElementById("space11").scr="DND_Test_ork.png";
+       orkSpace = 11;
+       break;
+     case 2:
+       getElementById("space15").scr="DND_Test_ork.png";
+       orkSpace = 15;
+       break;
+     case 3:
+       getElementById("space55").scr="DND_Test_ork.png";
+       orkSpace = 55;
+       break;
+     case 4:
+       getElementById("space51").scr="DND_Test_ork.png";
+       orkSpace = 51;
+       break;
+   }
+        document.getElementById("events").innerHTML='You dealt ' + PATK + ' damage and killed the enemy.';
+   	}
+    
+    else {
+    	playerHp = playerHp - EATK;
+        document.getElementById("HP").innerHTML='HP ' + playerHp;
+        
+    	if (Hp > 0) {
+ 	document.getElementById("events").innerHTML='You dealt ' + PATK + ' damage. The enemy dealt ' + EATK + ' damage';
+        }
+        
+     if (Hp < 1) { 
+   		document.getElementById("events").innerHTML="You died!";
+        alert("You died after killing " + orksKilled + "Orks")
+        gamestart()
+	 }
+    }
+  }
+    break;
+    case orkSpace - 1:
+    var PATK = Math.floor((Math.random() * 5) + 1);
+    var EATK = Math.floor((Math.random() * 3) + 1);
+    orkHP = orkHP - PATK;
+      
+    if (EnemyHP < 1) {
+    	orksKilled = orksKilled + 1;
+        orkmaxHp = orkmaxHp + 5;
+    	orkHP = orkmaxHp;
+        Hp = Hp + Math.floor((Math.random() * 10) + 1);
+        document.getElementById("HP").innerHTML='HP ' + playerHp;
+        switch(orkSpace) {
+          case 11:
+            getElementById("space11").scr="DND_Test_Grass.png";
+            break;
+            case 12:
+            getElementById("space12").scr="DND_Test_Grass.png";
+            break;
+            case 13:
+            getElementById("space13").scr="DND_Test_Grass.png";
+            break;
+            case 14:
+            getElementById("space14").scr="DND_Test_Grass.png";
+            break;
+            case 15:
+            getElementById("space15").scr="DND_Test_Grass.png";
+            break;
+            case 21:
+            getElementById("space21").scr="DND_Test_Grass.png";
+            break;
+            case 22:
+            getElementById("space22").scr="DND_Test_Grass.png";
+            break;
+            case 23:
+            getElementById("space23").scr="DND_Test_Grass.png";
+            break;
+            case 24:
+            getElementById("space24").scr="DND_Test_Grass.png";
+            break;
+            case 25:
+            getElementById("space25").scr="DND_Test_Grass.png";
+            break;
+            case 31:
+            getElementById("space31").scr="DND_Test_Grass.png";
+            break;
+            case 32:
+            getElementById("space32").scr="DND_Test_Grass.png";
+            break;
+            case 33:
+            getElementById("space33").scr="DND_Test_Grass.png";
+            break;
+            case 34:
+            getElementById("space34").scr="DND_Test_Grass.png";
+            break;
+            case 35:
+            getElementById("space35").scr="DND_Test_Grass.png";
+            break;
+            case 41:
+            getElementById("space41").scr="DND_Test_Grass.png";
+            break;
+            case 42:
+            getElementById("space42").scr="DND_Test_Grass.png";
+            break;
+            case 43:
+            getElementById("space43").scr="DND_Test_Grass.png";
+            break;
+            case 44:
+            getElementById("space44").scr="DND_Test_Grass.png";
+            break;
+            case 45:
+            getElementById("space45").scr="DND_Test_Grass.png";
+            break;
+            case 51:
+            getElementById("space51").scr="DND_Test_Grass.png";
+            break;
+            case 52:
+            getElementById("space52").scr="DND_Test_Grass.png";
+            break;
+            case 53:
+            getElementById("space53").scr="DND_Test_Grass.png";
+            break;
+            case 54:
+            getElementById("space54").scr="DND_Test_Grass.png";
+            break;
+            case 55:
+            getElementById("space55").scr="DND_Test_Grass.png";
+            break;
+        }
+        switch(Math.floor(Math.random * 4) + 1) {
+     case 1:
+       getElementById("space11").scr="DND_Test_ork.png";
+       orkSpace = 11;
+       break;
+     case 2:
+       getElementById("space15").scr="DND_Test_ork.png";
+       orkSpace = 15;
+       break;
+     case 3:
+       getElementById("space55").scr="DND_Test_ork.png";
+       orkSpace = 55;
+       break;
+     case 4:
+       getElementById("space51").scr="DND_Test_ork.png";
+       orkSpace = 51;
+       break;
+   }
+        document.getElementById("events").innerHTML='You dealt ' + PATK + ' damage and killed the enemy.';
+   	}
+    
+    else {
+    	playerHp = playerHp - EATK;
+        document.getElementById("HP").innerHTML='HP ' + playerHp;
+        
+    	if (Hp > 0) {
+ 	document.getElementById("events").innerHTML='You dealt ' + PATK + ' damage. The enemy dealt ' + EATK + ' damage';
+        }
+        
+     if (Hp < 1) { 
+   		document.getElementById("events").innerHTML="You died!";
+        alert("You died after killing " + orksKilled + "Orks")
+        gamestart()
+	 }
+    }
+  }
+    break;
+  case orkSpace + 10:
+  var PATK = Math.floor((Math.random() * 5) + 1);
+    var EATK = Math.floor((Math.random() * 3) + 1);
+    orkHP = orkHP - PATK;
+      
+    if (EnemyHP < 1) {
+    	orksKilled = orksKilled + 1;
+        orkmaxHp = orkmaxHp + 5;
+    	orkHP = orkmaxHp;
+        Hp = Hp + Math.floor((Math.random() * 10) + 1);
+        document.getElementById("HP").innerHTML='HP ' + playerHp;
+        switch(orkSpace) {
+          case 11:
+            getElementById("space11").scr="DND_Test_Grass.png";
+            break;
+            case 12:
+            getElementById("space12").scr="DND_Test_Grass.png";
+            break;
+            case 13:
+            getElementById("space13").scr="DND_Test_Grass.png";
+            break;
+            case 14:
+            getElementById("space14").scr="DND_Test_Grass.png";
+            break;
+            case 15:
+            getElementById("space15").scr="DND_Test_Grass.png";
+            break;
+            case 21:
+            getElementById("space21").scr="DND_Test_Grass.png";
+            break;
+            case 22:
+            getElementById("space22").scr="DND_Test_Grass.png";
+            break;
+            case 23:
+            getElementById("space23").scr="DND_Test_Grass.png";
+            break;
+            case 24:
+            getElementById("space24").scr="DND_Test_Grass.png";
+            break;
+            case 25:
+            getElementById("space25").scr="DND_Test_Grass.png";
+            break;
+            case 31:
+            getElementById("space31").scr="DND_Test_Grass.png";
+            break;
+            case 32:
+            getElementById("space32").scr="DND_Test_Grass.png";
+            break;
+            case 33:
+            getElementById("space33").scr="DND_Test_Grass.png";
+            break;
+            case 34:
+            getElementById("space34").scr="DND_Test_Grass.png";
+            break;
+            case 35:
+            getElementById("space35").scr="DND_Test_Grass.png";
+            break;
+            case 41:
+            getElementById("space41").scr="DND_Test_Grass.png";
+            break;
+            case 42:
+            getElementById("space42").scr="DND_Test_Grass.png";
+            break;
+            case 43:
+            getElementById("space43").scr="DND_Test_Grass.png";
+            break;
+            case 44:
+            getElementById("space44").scr="DND_Test_Grass.png";
+            break;
+            case 45:
+            getElementById("space45").scr="DND_Test_Grass.png";
+            break;
+            case 51:
+            getElementById("space51").scr="DND_Test_Grass.png";
+            break;
+            case 52:
+            getElementById("space52").scr="DND_Test_Grass.png";
+            break;
+            case 53:
+            getElementById("space53").scr="DND_Test_Grass.png";
+            break;
+            case 54:
+            getElementById("space54").scr="DND_Test_Grass.png";
+            break;
+            case 55:
+            getElementById("space55").scr="DND_Test_Grass.png";
+            break;
+        }
+        switch(Math.floor(Math.random * 4) + 1) {
+     case 1:
+       getElementById("space11").scr="DND_Test_ork.png";
+       orkSpace = 11;
+       break;
+     case 2:
+       getElementById("space15").scr="DND_Test_ork.png";
+       orkSpace = 15;
+       break;
+     case 3:
+       getElementById("space55").scr="DND_Test_ork.png";
+       orkSpace = 55;
+       break;
+     case 4:
+       getElementById("space51").scr="DND_Test_ork.png";
+       orkSpace = 51;
+       break;
+   }
+        document.getElementById("events").innerHTML='You dealt ' + PATK + ' damage and killed the enemy.';
+   	}
+    
+    else {
+    	playerHp = playerHp - EATK;
+        document.getElementById("HP").innerHTML='HP ' + playerHp;
+        
+    	if (Hp > 0) {
+ 	document.getElementById("events").innerHTML='You dealt ' + PATK + ' damage. The enemy dealt ' + EATK + ' damage';
+        }
+        
+     if (Hp < 1) { 
+   		document.getElementById("events").innerHTML="You died!";
+        alert("You died after killing " + orksKilled + "Orks")
+        gamestart()
+	 }
+    }
+  }
+  break;
+  case orkSpace - 10:
+  var PATK = Math.floor((Math.random() * 5) + 1);
+    var EATK = Math.floor((Math.random() * 3) + 1);
+    orkHP = orkHP - PATK;
+      
+    if (EnemyHP < 1) {
+    	orksKilled = orksKilled + 1;
+        orkmaxHp = orkmaxHp + 5;
+    	orkHP = orkmaxHp;
+        Hp = Hp + Math.floor((Math.random() * 10) + 1);
+        document.getElementById("HP").innerHTML='HP ' + playerHp;
+        switch(orkSpace) {
+          case 11:
+            getElementById("space11").scr="DND_Test_Grass.png";
+            break;
+            case 12:
+            getElementById("space12").scr="DND_Test_Grass.png";
+            break;
+            case 13:
+            getElementById("space13").scr="DND_Test_Grass.png";
+            break;
+            case 14:
+            getElementById("space14").scr="DND_Test_Grass.png";
+            break;
+            case 15:
+            getElementById("space15").scr="DND_Test_Grass.png";
+            break;
+            case 21:
+            getElementById("space21").scr="DND_Test_Grass.png";
+            break;
+            case 22:
+            getElementById("space22").scr="DND_Test_Grass.png";
+            break;
+            case 23:
+            getElementById("space23").scr="DND_Test_Grass.png";
+            break;
+            case 24:
+            getElementById("space24").scr="DND_Test_Grass.png";
+            break;
+            case 25:
+            getElementById("space25").scr="DND_Test_Grass.png";
+            break;
+            case 31:
+            getElementById("space31").scr="DND_Test_Grass.png";
+            break;
+            case 32:
+            getElementById("space32").scr="DND_Test_Grass.png";
+            break;
+            case 33:
+            getElementById("space33").scr="DND_Test_Grass.png";
+            break;
+            case 34:
+            getElementById("space34").scr="DND_Test_Grass.png";
+            break;
+            case 35:
+            getElementById("space35").scr="DND_Test_Grass.png";
+            break;
+            case 41:
+            getElementById("space41").scr="DND_Test_Grass.png";
+            break;
+            case 42:
+            getElementById("space42").scr="DND_Test_Grass.png";
+            break;
+            case 43:
+            getElementById("space43").scr="DND_Test_Grass.png";
+            break;
+            case 44:
+            getElementById("space44").scr="DND_Test_Grass.png";
+            break;
+            case 45:
+            getElementById("space45").scr="DND_Test_Grass.png";
+            break;
+            case 51:
+            getElementById("space51").scr="DND_Test_Grass.png";
+            break;
+            case 52:
+            getElementById("space52").scr="DND_Test_Grass.png";
+            break;
+            case 53:
+            getElementById("space53").scr="DND_Test_Grass.png";
+            break;
+            case 54:
+            getElementById("space54").scr="DND_Test_Grass.png";
+            break;
+            case 55:
+            getElementById("space55").scr="DND_Test_Grass.png";
+            break;
+        }
+        switch(Math.floor(Math.random * 4) + 1) {
+     case 1:
+       getElementById("space11").scr="DND_Test_ork.png";
+       orkSpace = 11;
+       break;
+     case 2:
+       getElementById("space15").scr="DND_Test_ork.png";
+       orkSpace = 15;
+       break;
+     case 3:
+       getElementById("space55").scr="DND_Test_ork.png";
+       orkSpace = 55;
+       break;
+     case 4:
+       getElementById("space51").scr="DND_Test_ork.png";
+       orkSpace = 51;
+       break;
+   }
+        document.getElementById("events").innerHTML='You dealt ' + PATK + ' damage and killed the enemy.';
+   	}
+    
+    else {
+    	playerHp = playerHp - EATK;
+        document.getElementById("HP").innerHTML='HP ' + playerHp;
+        
+    	if (Hp > 0) {
+ 	document.getElementById("events").innerHTML='You dealt ' + PATK + ' damage. The enemy dealt ' + EATK + ' damage';
+        }
+        
+     if (Hp < 1) { 
+   		document.getElementById("events").innerHTML="You died!";
+        alert("You died after killing " + orksKilled + "Orks")
+        gamestart()
+	 }
+    }
+  }
+  break;
+  }
+  function crossbow() {
+    
   }
 </script>
 </body>
