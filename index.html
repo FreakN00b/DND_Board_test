@@ -678,8 +678,9 @@
   }
   }
   function shortsword() {
-    switch (playerSpace) {
-      case orkSpace + 1:
+   
+   switch (playerSpace) {
+    case orkSpace + 1:
     var playerATK = Math.floor((Math.random() * 5) + 1);
     var orkATK = Math.floor((Math.random() * 3) + 1);
     orkHP = orkHP - playerATK;
@@ -767,7 +768,8 @@
             getElementById("space55").scr="DND_Test_Grass.png";
             break;
         }
-        switch(Math.floor(Math.random * 4) + 1) {
+        
+     switch(Math.floor(Math.random * 4) + 1) {
      case 1:
        getElementById("space11").scr="DND_Test_ork.png";
        orkSpace = 11;
@@ -784,25 +786,28 @@
        getElementById("space51").scr="DND_Test_ork.png";
        orkSpace = 51;
        break;
-   }
-        document.getElementById("events").innerHTML='You dealt ' + playerATK + ' damage and killed the enemy.';
-   	}
+      }
+        
+      document.getElementById("events").innerHTML='You dealt ' + playerATK + ' damage and killed the enemy.';
+    }
     
     else {
     	playerHp = playerHp - orkATK;
         document.getElementById("HP").innerHTML='HP ' + playerHp;
+	 
         
     	if (Hp > 0) {
  	document.getElementById("events").innerHTML='You dealt ' + playerATK + ' damage. The enemy dealt ' + orkATK + ' damage';
         }
         
-     if (Hp < 1) { 
+        if (Hp < 1) { 
    		document.getElementById("events").innerHTML="You died!";
         alert("You died after killing " + orksKilled + "Orks");
         gamestart();
-	 }
+	}
     }
-  }
+  
+    
     break;
     case orkSpace - 1:
     var playerATK = Math.floor((Math.random() * 5) + 1);
@@ -927,7 +932,7 @@
         gamestart();
 	 }
     }
-  }
+  
     break;
   case orkSpace + 10:
   var playerATK = Math.floor((Math.random() * 5) + 1);
@@ -940,7 +945,8 @@
     	orkHP = orkmaxHp;
         playerHp = playerHp + Math.floor((Math.random() * 10) + 1);
         document.getElementById("HP").innerHTML='HP ' + playerHp;
-        switch(orkSpace) {
+        
+	  switch(orkSpace) {
           case 11:
             getElementById("space11").scr="DND_Test_Grass.png";
             break;
@@ -1017,7 +1023,8 @@
             getElementById("space55").scr="DND_Test_Grass.png";
             break;
         }
-        switch(Math.floor(Math.random * 4) + 1) {
+     
+     switch(Math.floor(Math.random * 4) + 1) {
      case 1:
        getElementById("space11").scr="DND_Test_ork.png";
        orkSpace = 11;
@@ -1034,9 +1041,9 @@
        getElementById("space51").scr="DND_Test_ork.png";
        orkSpace = 51;
        break;
-   }
+     }
         document.getElementById("events").innerHTML='You dealt ' + playerATK + ' damage and killed the enemy.';
-   	}
+   }
     
     else {
     	playerHp = playerHp - orkATK;
@@ -1052,7 +1059,7 @@
         gamestart();
 	 }
     }
-  }
+  
   break;
   case orkSpace - 10:
   var playerATK = Math.floor((Math.random() * 5) + 1);
@@ -1177,11 +1184,12 @@
         gamestart();
 	 }
     }
-  }
+  
   break;
 	default:
 	document.getElementById("Message").innerHTML="No Target!";
-  }
+  	}
+}
 </script>
 </body>
 </html>
