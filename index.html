@@ -100,10 +100,10 @@
   
  function gamestart() {
    playerHp = 50;
-   orkHp = 5
-   orkmaxHp = 5
+   orkHp = 5;
+   orkmaxHp = 5;
    playerSpace = 33;
-   playerAp = 3
+   playerAp = 3;
    document.getElementById("Ap").innerHTML=playerAP + " Actions remaining";
    document.getElementById("space33").src="DND_Test_player.png";
    switch(Math.floor(Math.random * 4) + 1) {
@@ -680,15 +680,15 @@
   function shortsword() {
     switch (playerSpace) {
       case orkSpace + 1:
-    var PATK = Math.floor((Math.random() * 5) + 1);
-    var EATK = Math.floor((Math.random() * 3) + 1);
-    orkHP = orkHP - PATK;
+    var playerATK = Math.floor((Math.random() * 5) + 1);
+    var orkATK = Math.floor((Math.random() * 3) + 1);
+    orkHP = orkHP - playerATK;
       
     if (EnemyHP < 1) {
     	orksKilled = orksKilled + 1;
         orkmaxHp = orkmaxHp + 5;
     	orkHP = orkmaxHp;
-        Hp = Hp + Math.floor((Math.random() * 10) + 1);
+        playerHp = playerHp + Math.floor((Math.random() * 10) + 1);
         document.getElementById("HP").innerHTML='HP ' + playerHp;
         switch(orkSpace) {
           case 11:
@@ -785,15 +785,15 @@
        orkSpace = 51;
        break;
    }
-        document.getElementById("events").innerHTML='You dealt ' + PATK + ' damage and killed the enemy.';
+        document.getElementById("events").innerHTML='You dealt ' + playerATK + ' damage and killed the enemy.';
    	}
     
     else {
-    	playerHp = playerHp - EATK;
+    	playerHp = playerHp - orkATK;
         document.getElementById("HP").innerHTML='HP ' + playerHp;
         
     	if (Hp > 0) {
- 	document.getElementById("events").innerHTML='You dealt ' + PATK + ' damage. The enemy dealt ' + EATK + ' damage';
+ 	document.getElementById("events").innerHTML='You dealt ' + playerATK + ' damage. The enemy dealt ' + orkATK + ' damage';
         }
         
      if (Hp < 1) { 
@@ -805,9 +805,9 @@
   }
     break;
     case orkSpace - 1:
-    var PATK = Math.floor((Math.random() * 5) + 1);
-    var EATK = Math.floor((Math.random() * 3) + 1);
-    orkHP = orkHP - PATK;
+    var playerATK = Math.floor((Math.random() * 5) + 1);
+    var orkATK = Math.floor((Math.random() * 3) + 1);
+    orkHP = orkHP - playerATK;
       
     if (EnemyHP < 1) {
     	orksKilled = orksKilled + 1;
@@ -910,15 +910,15 @@
        orkSpace = 51;
        break;
    }
-        document.getElementById("events").innerHTML='You dealt ' + PATK + ' damage and killed the enemy.';
+        document.getElementById("events").innerHTML='You dealt ' + playerATK + ' damage and killed the enemy.';
    	}
     
     else {
-    	playerHp = playerHp - EATK;
+    	playerHp = playerHp - orkATK;
         document.getElementById("HP").innerHTML='HP ' + playerHp;
         
     	if (Hp > 0) {
- 	document.getElementById("events").innerHTML='You dealt ' + PATK + ' damage. The enemy dealt ' + EATK + ' damage';
+ 	document.getElementById("events").innerHTML='You dealt ' + playerATK + ' damage. The enemy dealt ' + orkATK + ' damage';
         }
         
      if (Hp < 1) { 
@@ -930,15 +930,15 @@
   }
     break;
   case orkSpace + 10:
-  var PATK = Math.floor((Math.random() * 5) + 1);
-    var EATK = Math.floor((Math.random() * 3) + 1);
-    orkHP = orkHP - PATK;
+  var playerATK = Math.floor((Math.random() * 5) + 1);
+    var orkATK = Math.floor((Math.random() * 3) + 1);
+    orkHP = orkHP - playerATK;
       
     if (EnemyHP < 1) {
     	orksKilled = orksKilled + 1;
         orkmaxHp = orkmaxHp + 5;
     	orkHP = orkmaxHp;
-        Hp = Hp + Math.floor((Math.random() * 10) + 1);
+        playerHp = playerHp + Math.floor((Math.random() * 10) + 1);
         document.getElementById("HP").innerHTML='HP ' + playerHp;
         switch(orkSpace) {
           case 11:
@@ -1035,15 +1035,15 @@
        orkSpace = 51;
        break;
    }
-        document.getElementById("events").innerHTML='You dealt ' + PATK + ' damage and killed the enemy.';
+        document.getElementById("events").innerHTML='You dealt ' + playerATK + ' damage and killed the enemy.';
    	}
     
     else {
-    	playerHp = playerHp - EATK;
+    	playerHp = playerHp - orkATK;
         document.getElementById("HP").innerHTML='HP ' + playerHp;
         
     	if (Hp > 0) {
- 	document.getElementById("events").innerHTML='You dealt ' + PATK + ' damage. The enemy dealt ' + EATK + ' damage';
+ 	document.getElementById("events").innerHTML='You dealt ' + playerATK + ' damage. The enemy dealt ' + orkATK + ' damage';
         }
         
      if (Hp < 1) { 
@@ -1055,15 +1055,15 @@
   }
   break;
   case orkSpace - 10:
-  var PATK = Math.floor((Math.random() * 5) + 1);
-    var EATK = Math.floor((Math.random() * 3) + 1);
-    orkHP = orkHP - PATK;
+  var playerATK = Math.floor((Math.random() * 5) + 1);
+    var orkATK = Math.floor((Math.random() * 3) + 1);
+    orkHP = orkHP - playerATK;
       
     if (EnemyHP < 1) {
     	orksKilled = orksKilled + 1;
         orkmaxHp = orkmaxHp + 5;
     	orkHP = orkmaxHp;
-        Hp = Hp + Math.floor((Math.random() * 10) + 1);
+        playerHp = playerHp + Math.floor((Math.random() * 10) + 1);
         document.getElementById("HP").innerHTML='HP ' + playerHp;
         switch(orkSpace) {
           case 11:
@@ -1160,15 +1160,15 @@
        orkSpace = 51;
        break;
    }
-        document.getElementById("Message").innerHTML='You dealt ' + PATK + ' damage and killed the enemy.';
+        document.getElementById("Message").innerHTML='You dealt ' + playerATK + ' damage and killed the enemy.';
    	}
     
     else {
-    	playerHp = playerHp - EATK;
+    	playerHp = playerHp - orkATK;
         document.getElementById("HP").innerHTML='HP ' + playerHp;
         
     	if (Hp > 0) {
- 	document.getElementById("Message").innerHTML='You dealt ' + PATK + ' damage. The enemy dealt ' + EATK + ' damage';
+ 	document.getElementById("Message").innerHTML='You dealt ' + playerATK + ' damage. The enemy dealt ' + orkATK + ' damage';
         }
         
      if (Hp < 1) { 
