@@ -1160,7 +1160,7 @@
        orkSpace = 51;
        break;
    }
-        document.getElementById("events").innerHTML='You dealt ' + PATK + ' damage and killed the enemy.';
+        document.getElementById("Message").innerHTML='You dealt ' + PATK + ' damage and killed the enemy.';
    	}
     
     else {
@@ -1168,20 +1168,19 @@
         document.getElementById("HP").innerHTML='HP ' + playerHp;
         
     	if (Hp > 0) {
- 	document.getElementById("events").innerHTML='You dealt ' + PATK + ' damage. The enemy dealt ' + EATK + ' damage';
+ 	document.getElementById("Message").innerHTML='You dealt ' + PATK + ' damage. The enemy dealt ' + EATK + ' damage';
         }
         
      if (Hp < 1) { 
-   		document.getElementById("events").innerHTML="You died!";
+   		document.getElementById("Message").innerHTML="You died!";
         alert("You died after killing " + orksKilled + "Orks")
         gamestart()
 	 }
     }
   }
   break;
-  }
-  function crossbow() {
-    
+	default:
+	document.getElementById("Message").innerHTML="No Target!";
   }
 </script>
 </body>
