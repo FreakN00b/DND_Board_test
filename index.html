@@ -682,8 +682,7 @@
   }
   function shortsword() {
    
-   switch (playerSpace) {
-    case orkSpace + 1:
+   if (playerSpace + 1 == orkSpace) {
     var playerATK = Math.floor((Math.random() * 5) + 1);
     var orkATK = Math.floor((Math.random() * 3) + 1);
     orkHP = orkHP - playerATK;
@@ -809,10 +808,8 @@
         gamestart();
 	}
     }
-  
-    
-    break;
-    case orkSpace - 1:
+   }
+    if (playerSpace - 1 == orkSpace) {
     var playerATK = Math.floor((Math.random() * 5) + 1);
     var orkATK = Math.floor((Math.random() * 3) + 1);
     orkHP = orkHP - playerATK;
@@ -935,9 +932,8 @@
         gamestart();
 	 }
     }
-  
-    break;
-  case orkSpace + 10:
+  }
+  if (playerSpace + 10 == orkSpace) {
   var playerATK = Math.floor((Math.random() * 5) + 1);
     var orkATK = Math.floor((Math.random() * 3) + 1);
     orkHP = orkHP - playerATK;
@@ -1062,9 +1058,8 @@
         gamestart();
 	 }
     }
-  
-  break;
-  case orkSpace - 10:
+  }
+if (playerSpace - 10 == orkSpace)
     var playerATK = Math.floor((Math.random() * 5) + 1);
     var orkATK = Math.floor((Math.random() * 3) + 1);
     orkHP = orkHP - playerATK;
@@ -1186,12 +1181,8 @@
         alert("You died after killing " + orksKilled + " Orks");
         gamestart();
 	 }
-    }
-  
-  break;
-	default:
-	document.getElementById("Message").innerHTML="No Target!";
   	}
+	}
   }
 </script>
 </body>
