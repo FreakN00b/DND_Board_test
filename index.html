@@ -688,7 +688,7 @@
     orkATK = Math.floor((Math.random() * 3) + 1);
     orkHP = orkHP - playerATK;
       
-    if (EnemyHP < 1) {
+    if (orkHP < 1) {
     	orksKilled = orksKilled + 1;
         orkmaxHp = orkmaxHp + 5;
     	orkHP = orkmaxHp;
@@ -799,11 +799,11 @@
         document.getElementById("HP").innerHTML='HP ' + playerHp;
 	 
         
-    	if (Hp > 0) {
+    	if (playerHp > 0) {
  	document.getElementById("events").innerHTML='You dealt ' + playerATK + ' damage. The enemy dealt ' + orkATK + ' damage';
         }
         
-        if (Hp < 1) { 
+        if (playerHp < 1) { 
    	document.getElementById("events").innerHTML="You died!";
         alert("You died after killing " + orksKilled + "Orks");
         gamestart();
@@ -816,11 +816,11 @@
     orkATK = Math.floor((Math.random() * 3) + 1);
     orkHP = orkHP - playerATK;
       
-    if (EnemyHP < 1) {
+    if (orkHP < 1) {
     	orksKilled = orksKilled + 1;
         orkmaxHp = orkmaxHp + 5;
     	orkHP = orkmaxHp;
-        Hp = Hp + Math.floor((Math.random() * 10) + 1);
+        playerHp = playerHp + Math.floor((Math.random() * 10) + 1);
         document.getElementById("HP").innerHTML='HP ' + playerHp;
         switch(orkSpace) {
           case 11:
@@ -924,11 +924,11 @@
     	playerHp = playerHp - orkATK;
         document.getElementById("HP").innerHTML='HP ' + playerHp;
         
-    	if (Hp > 0) {
+    	if (playerHp > 0) {
  	document.getElementById("events").innerHTML='You dealt ' + playerATK + ' damage. The enemy dealt ' + orkATK + ' damage';
         }
         
-     if (Hp < 1) { 
+     if (playerHp < 1) { 
    	document.getElementById("events").innerHTML="You died!";
         alert("You died after killing " + orksKilled + "Orks");
         gamestart();
@@ -942,7 +942,7 @@
    orkATK = Math.floor((Math.random() * 3) + 1);
     orkHP = orkHP - playerATK;
       
-    if (EnemyHP < 1) {
+    if (orkHP < 1) {
     	orksKilled = orksKilled + 1;
         orkmaxHp = orkmaxHp + 5;
     	orkHP = orkmaxHp;
@@ -1052,11 +1052,11 @@
     	playerHp = playerHp - orkATK;
         document.getElementById("HP").innerHTML='HP ' + playerHp;
         
-    	if (Hp > 0) {
+    	if (playerHp > 0) {
  	document.getElementById("events").innerHTML='You dealt ' + playerATK + ' damage. The enemy dealt ' + orkATK + ' damage';
         }
         
-     if (Hp < 1) { 
+     if (playerHp < 1) { 
    	document.getElementById("events").innerHTML="You died!";
         alert("You died after killing " + orksKilled + "Orks");
         gamestart();
@@ -1069,7 +1069,7 @@ if (playerSpace == orkSpace) {
     orkATK = Math.floor((Math.random() * 3) + 1);
     orkHP = orkHP - playerATK;
       
-    if (EnemyHP < 1) {
+    if (orkHP < 1) {
     	orksKilled = orksKilled + 1;
         orkmaxHp = orkmaxHp + 5;
     	orkHP = orkmaxHp;
@@ -1177,11 +1177,11 @@ if (playerSpace == orkSpace) {
     	playerHp = playerHp - orkATK;
         document.getElementById("HP").innerHTML='HP ' + playerHp;
         
-    	if (Hp > 0) {
+    	if (playerHp > 0) {
  	document.getElementById("Message").innerHTML='You dealt ' + playerATK + ' damage. The enemy dealt ' + orkATK + ' damage';
         }
         
-     if (Hp < 1) { 
+     if (playerHp < 1) { 
    	document.getElementById("Message").innerHTML="You died!";
         alert("You died after killing " + orksKilled + " Orks");
         gamestart();
