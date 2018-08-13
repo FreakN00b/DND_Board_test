@@ -682,8 +682,7 @@
   }
   function shortsword() {
    
-	  playerSpace = playerSpace + 1;
-   if (playerSpace == orkSpace) {
+   if (playerSpace + 1 == orkSpace) {
     playerATK = Math.floor((Math.random() * 5) + 1);
     orkATK = Math.floor((Math.random() * 3) + 1);
     orkHP = orkHP - playerATK;
@@ -810,8 +809,7 @@
 	}
     }
    }
-	  playerSpace = playerSpace - 2;
-    if (playerSpace == orkSpace) {
+    if (playerSpace - 1 == orkSpace) {
     playerATK = Math.floor((Math.random() * 5) + 1);
     orkATK = Math.floor((Math.random() * 3) + 1);
     orkHP = orkHP - playerATK;
@@ -936,9 +934,7 @@
 	 }
     }
   }
-	  playerSpace = playerSpace + 1;
-	  playerSpace = playerSpace + 10;
-  if (playerSpace == orkSpace) {
+  if (playerSpace + 10 == orkSpace) {
    playerATK = Math.floor((Math.random() * 5) + 1);
    orkATK = Math.floor((Math.random() * 3) + 1);
     orkHP = orkHP - playerATK;
@@ -1064,8 +1060,7 @@
 	 }
     }
   }
-	  playerSpace = playerSpace - 20;
-if (playerSpace == orkSpace) {
+if (playerSpace - 10 == orkSpace) {
     playerATK = Math.floor((Math.random() * 5) + 1);
     orkATK = Math.floor((Math.random() * 3) + 1);
     orkHP = orkHP - playerATK;
@@ -1190,7 +1185,6 @@ if (playerSpace == orkSpace) {
 	 }
   	}
 	}
-	  playerSpace = playerSpace + 10;
   }
 </script>
 </body>
